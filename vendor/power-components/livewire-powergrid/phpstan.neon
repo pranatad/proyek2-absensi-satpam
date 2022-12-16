@@ -1,0 +1,13 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+    ignoreErrors:
+    	- '#Cannot call method [a-zA-Z0-9\\_]#'
+
+    paths:
+        - src
+
+    level: max
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
