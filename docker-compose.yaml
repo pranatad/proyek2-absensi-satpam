@@ -16,18 +16,6 @@ services:
     networks:
       - paksatpam
 
-  db:
-    image: mysql:8.0 
-    container_name: paksatpam
-    environment:
-      MYSQL_DATABASE: absensi_app
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_PASSWORD: password
-      MYSQL_USER: admin
-      SERVICE_NAME: mysql
-networks:
-      - paksatpam
-
   nginx:
     image: nginx:alpine
     container_name: paksatpam-nginx
