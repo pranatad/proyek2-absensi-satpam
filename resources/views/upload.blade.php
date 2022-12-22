@@ -9,7 +9,7 @@
 <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
 
     <div class="panel panel-primary">
-      <div class="panel-heading"><h2>Laravel File Storage with Amazon S3 </h2></div>
+      <div class="panel-heading"><h2>Tes Cloud Storage </h2></div>
       <div class="panel-body">
 
         @if (Session::get('message'))
@@ -32,11 +32,6 @@
         <form action="{{ route('image.upload.post') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row">
-                <div class="col-md-6">
-                    <label for="">Title</label>
-                    <input type="text" name="title" class="form-control">
-                </div>
-
                 <div class="col-md-6">
                     <label for="">Image</label>
                     <input type="file" name="image" class="form-control">
