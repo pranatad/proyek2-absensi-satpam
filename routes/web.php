@@ -8,6 +8,7 @@ use App\Http\Controllers\HolidayController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PositionController;
 use App\Http\Controllers\PresenceController;
+use App\Http\Controllers\ImageController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -73,3 +74,6 @@ Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'index'])->name('auth.login');
     Route::post('/login', [AuthController::class, 'authenticate']);
 });
+
+Route::get('image-upload', [ ImageController::class, 'upload' ])->name('image.upload');
+Route::post('image-store', [ ImageController::class, 'store' ])->name('image.upload.post');
